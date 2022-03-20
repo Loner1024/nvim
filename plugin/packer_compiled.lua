@@ -83,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/loner/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/Users/loner/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
   }
 }
 
