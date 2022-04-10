@@ -33,7 +33,6 @@ keymap("n", "sc", "<C-w>c", opts)
 -- 关闭其他
 keymap("n", "so", "<C-w>o", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -76,3 +75,31 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+-- 插件快捷键
+local pluginKeys = {}
+
+-- nvim-tree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+-- 列表快捷键
+pluginKeys.nvimTreeList = {
+  -- 打开文件或文件夹
+  { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+  -- 分屏打开文件
+  { key = "v", action = "vsplit" },
+  { key = "h", action = "split" },
+  -- 显示隐藏文件
+  { key = "i", action = "toggle_ignored" }, -- Ignore (node_modules)
+  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
+  -- 文件操作
+  { key = "<F5>", action = "refresh" },
+  { key = "a", action = "create" },
+  { key = "d", action = "remove" },
+  { key = "r", action = "rename" },
+  { key = "x", action = "cut" },
+  { key = "c", action = "copy" },
+  { key = "p", action = "paste" },
+  { key = "s", action = "system_open" },
+}
+return pluginKeys
