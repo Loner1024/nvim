@@ -20,10 +20,18 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<leader>h", "<C-w>h", opts)
+keymap("n", "<leader>j", "<C-w>j", opts)
+keymap("n", "<leader>k", "<C-w>k", opts)
+keymap("n", "<leader>l", "<C-w>l", opts)
+-- 水平分屏
+keymap("n", "sv", ":vsp<CR>", opts)
+-- 垂直分屏
+keymap("n", "sh", ":sp<CR>", opts)
+-- 关闭当前
+keymap("n", "sc", "<C-w>c", opts)
+-- 关闭其他
+keymap("n", "so", "<C-w>o", opts)
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
