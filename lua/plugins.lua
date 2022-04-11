@@ -61,6 +61,7 @@ return packer.startup(function(use)
 
   -- nvim-tree
   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+  use ({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -69,6 +70,13 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
+  -- Golang
+  use('nvim-lua/plenary.nvim')
+  use('nvim-lua/popup.nvim')
+  use('crispgm/nvim-go')
+  use('rcarriga/nvim-notify')
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim
