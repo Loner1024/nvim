@@ -72,8 +72,6 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- Golang
-  use('nvim-lua/plenary.nvim')
-  use('nvim-lua/popup.nvim')
   use('crispgm/nvim-go')
   use('rcarriga/nvim-notify')
 
