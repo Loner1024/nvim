@@ -29,6 +29,11 @@ require("lsp.cmp")
 require("lsp.ui")
 -- require("lsp.formatter")
 require("lsp.null-ls")
+-- setup nvim-go
+require('go').setup({})
+
+-- setup lsp client
+require('lspconfig').gopls.setup({})
 -- utils
 -- require("utils.change-colorscheme")
 -- 复制到windows剪贴板

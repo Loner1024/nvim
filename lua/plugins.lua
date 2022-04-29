@@ -101,7 +101,10 @@ packer.startup({
     use("b0o/schemastore.nvim")
     -- Rust 增强
     use("simrat39/rust-tools.nvim")
+
     use("wakatime/vim-wakatime")
+
+    use('crispgm/nvim-go')
 
     --------------------- colorschemes --------------------
     -- tokyonight
